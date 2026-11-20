@@ -1,0 +1,119 @@
+[
+  {
+    "id": "freedom-7",
+    "name": "Freedom 7",
+    "year": 1961,
+    "program": "mercury",
+    "requires": ["mercury", "redstone"],
+    "chain": ["Pre-launch", "Launch", "Reentry", "Splashdown"],
+    "vp": 2
+  },
+  {
+    "id": "friendship-7",
+    "name": "Friendship 7",
+    "year": 1962,
+    "program": "mercury",
+    "requires": ["mercury", "atlas"],
+    "chain": ["Pre-launch", "Launch", "Orbit", "Reentry", "Splashdown"],
+    "vp": 3
+  },
+  {
+    "id": "faith-7",
+    "name": "Faith 7",
+    "year": 1963,
+    "program": "mercury",
+    "requires": ["mercury", "atlas"],
+    "chain": ["Pre-launch", "Launch", "Orbit", "Reentry", "Splashdown"],
+    "vp": 4
+  },
+  {
+    "id": "gemini-3",
+    "name": "Gemini 3",
+    "year": 1965,
+    "program": "gemini",
+    "requires": ["gemini", "titan"],
+    "chain": ["Pre-launch", "Launch", "Orbit", "Reentry", "Splashdown"],
+    "vp": 3
+  },
+  {
+    "id": "gemini-4",
+    "name": "Gemini 4 (EVA)",
+    "year": 1965,
+    "program": "gemini",
+    "requires": ["gemini", "titan"],
+    "chain": ["Pre-launch", "Launch", "Orbit", "EVA", "Reentry", "Splashdown"],
+    "vp": 4
+  },
+  {
+    "id": "gemini-8",
+    "name": "Gemini 8 (dock)",
+    "year": 1966,
+    "program": "gemini",
+    "requires": ["gemini", "titan", "agena"],
+    "chain": ["Pre-launch", "Launch", "Orbit", "Rendezvous", "Reentry", "Splashdown"],
+    "vp": 5
+  },
+  {
+    "id": "gemini-12",
+    "name": "Gemini 12",
+    "year": 1966,
+    "program": "gemini",
+    "requires": ["gemini", "titan"],
+    "chain": ["Pre-launch", "Launch", "Orbit", "EVA", "Reentry", "Splashdown"],
+    "vp": 5
+  },
+  {
+    "id": "apollo-7",
+    "name": "Apollo 7",
+    "year": 1968,
+    "program": "apollo",
+    "requires": ["csm", "saturn-ib"],
+    "chain": ["Pre-launch", "Launch", "Orbit", "Reentry", "Splashdown"],
+    "vp": 5
+  },
+  {
+    "id": "apollo-8",
+    "name": "Apollo 8",
+    "year": 1968,
+    "program": "apollo",
+    "requires": ["csm", "saturn-v"],
+    "chain": ["Pre-launch", "Launch", "TLI/Coast", "Lunar Orbit", "Reentry", "Splashdown"],
+    "vp": 7
+  },
+  {
+    "id": "apollo-9",
+    "name": "Apollo 9 (LM test)",
+    "year": 1969,
+    "program": "apollo",
+    "requires": ["csm", "lm", "saturn-v"],
+    "chain": ["Pre-launch", "Launch", "Orbit", "Rendezvous", "Reentry", "Splashdown"],
+    "vp": 6
+  },
+  {
+    "id": "apollo-10",
+    "name": "Apollo 10 (rehearsal)",
+    "year": 1969,
+    "program": "apollo",
+    "requires": ["csm", "lm", "saturn-v"],
+    "chain": ["Pre-launch", "Launch", "TLI/Coast", "Lunar Orbit", "Descent", "Reentry", "Splashdown"],
+    "vp": 7
+  },
+  {
+    "id": "apollo-11",
+    "name": "Apollo 11 (Moon)",
+    "year": 1969,
+    "program": "apollo",
+    "requires": ["csm", "lm", "saturn-v", "eva-suit"],
+    "chain": [
+      "Pre-launch",
+      "Launch",
+      "TLI/Coast",
+      "Lunar Orbit",
+      "Landing",
+      "Ascent",
+      "Reentry",
+      "Splashdown"
+    ],
+    "vp": 10
+  }
+]

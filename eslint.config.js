@@ -44,6 +44,12 @@ export default tseslint.config(
     files: ['src/web/**'],
     rules: layeringRules(['../sim', '../print', '../engine/', '../data/']),
   },
+  // data: JSON content + zod schemas; engine types only (type imports are
+  // erased), never sim/web/print — keeps `print` dependent on `data` alone.
+  {
+    files: ['src/data/**'],
+    rules: layeringRules(['../sim', '../web', '../print']),
+  },
   // print: data only (spec §3).
   {
     files: ['src/print/**'],

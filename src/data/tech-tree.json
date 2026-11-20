@@ -1,0 +1,98 @@
+[
+  {
+    "id": "redstone",
+    "name": "Redstone",
+    "program": "mercury",
+    "rdCost": 2,
+    "moneyCost": 2,
+    "tags": ["propulsion", "mercury"]
+  },
+  {
+    "id": "atlas",
+    "name": "Atlas",
+    "program": "mercury",
+    "rdCost": 3,
+    "moneyCost": 3,
+    "tags": ["propulsion", "mercury"]
+  },
+  {
+    "id": "mercury",
+    "name": "Mercury capsule",
+    "program": "mercury",
+    "rdCost": 3,
+    "moneyCost": 2,
+    "tags": ["capsule", "mercury"]
+  },
+  {
+    "id": "titan",
+    "name": "Titan",
+    "program": "gemini",
+    "rdCost": 3,
+    "moneyCost": 3,
+    "tags": ["propulsion", "gemini"],
+    "unlocksAfter": { "program": "mercury", "minCompleted": 1 }
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini capsule",
+    "program": "gemini",
+    "rdCost": 4,
+    "moneyCost": 3,
+    "tags": ["capsule", "gemini"],
+    "unlocksAfter": { "program": "mercury", "minCompleted": 1 }
+  },
+  {
+    "id": "agena",
+    "name": "Agena target vehicle",
+    "program": "gemini",
+    "rdCost": 2,
+    "moneyCost": 2,
+    "tags": ["agena", "gemini"],
+    "unlocksAfter": { "program": "mercury", "minCompleted": 1 }
+  },
+  {
+    "id": "saturn-ib",
+    "name": "Saturn IB",
+    "program": "apollo",
+    "rdCost": 4,
+    "moneyCost": 4,
+    "tags": ["propulsion", "apollo"],
+    "unlocksAfter": { "program": "gemini", "minCompleted": 1 }
+  },
+  {
+    "id": "saturn-v",
+    "name": "Saturn V",
+    "program": "apollo",
+    "rdCost": 7,
+    "moneyCost": 7,
+    "tags": ["propulsion", "apollo"],
+    "unlocksAfter": { "program": "gemini", "minCompleted": 1 }
+  },
+  {
+    "id": "csm",
+    "name": "Command/Service Module",
+    "program": "apollo",
+    "rdCost": 5,
+    "moneyCost": 4,
+    "tags": ["capsule", "csm", "apollo"],
+    "unlocksAfter": { "program": "gemini", "minCompleted": 1 }
+  },
+  {
+    "id": "lm",
+    "name": "Lunar Module",
+    "program": "apollo",
+    "rdCost": 5,
+    "moneyCost": 5,
+    "tags": ["lm", "apollo"],
+    "unlocksAfter": { "program": "gemini", "minCompleted": 1 }
+  },
+  {
+    "id": "eva-suit",
+    "name": "EVA suit",
+    "program": "apollo",
+    "rdCost": 2,
+    "moneyCost": 1,
+    "tags": ["suit", "apollo"],
+    "unlocksAfter": { "program": "gemini", "minCompleted": 1 }
+  }
+]

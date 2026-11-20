@@ -1,0 +1,987 @@
+[
+  {
+    "id": "2H",
+    "suit": "H",
+    "rank": 2,
+    "s": 2,
+    "kind": "person",
+    "values": {
+      "money": 2,
+      "rd": 1,
+      "crew": 1,
+      "repair": 2
+    },
+    "flavor": "Astronaut Candidate"
+  },
+  {
+    "id": "3H",
+    "suit": "H",
+    "rank": 3,
+    "s": 3,
+    "kind": "person",
+    "values": {
+      "money": 3,
+      "rd": 2,
+      "crew": 1,
+      "repair": 3
+    },
+    "flavor": "Flight Crew"
+  },
+  {
+    "id": "4H",
+    "suit": "H",
+    "rank": 4,
+    "s": 4,
+    "kind": "person",
+    "values": {
+      "money": 4,
+      "rd": 2,
+      "crew": 2,
+      "repair": 4
+    },
+    "flavor": "Mission Specialist"
+  },
+  {
+    "id": "5H",
+    "suit": "H",
+    "rank": 5,
+    "s": 5,
+    "kind": "person",
+    "values": {
+      "money": 5,
+      "rd": 3,
+      "crew": 2,
+      "repair": 5
+    },
+    "flavor": "Mission Specialist"
+  },
+  {
+    "id": "6H",
+    "suit": "H",
+    "rank": 6,
+    "s": 6,
+    "kind": "person",
+    "values": {
+      "money": 6,
+      "rd": 3,
+      "crew": 2,
+      "repair": 6
+    },
+    "flavor": "Senior Astronaut"
+  },
+  {
+    "id": "7H",
+    "suit": "H",
+    "rank": 7,
+    "s": 7,
+    "kind": "person",
+    "values": {
+      "money": 7,
+      "rd": 4,
+      "crew": 3,
+      "repair": 7
+    },
+    "flavor": "Senior Astronaut"
+  },
+  {
+    "id": "8H",
+    "suit": "H",
+    "rank": 8,
+    "s": 8,
+    "kind": "person",
+    "values": {
+      "money": 8,
+      "rd": 4,
+      "crew": 3,
+      "repair": 8
+    },
+    "flavor": "Chief Astronaut"
+  },
+  {
+    "id": "9H",
+    "suit": "H",
+    "rank": 9,
+    "s": 9,
+    "kind": "person",
+    "named": {
+      "name": "Alan Shepard",
+      "role": "astronaut",
+      "abilities": [
+        {
+          "kind": "phaseBoost",
+          "phases": [
+            "Launch"
+          ],
+          "amount": 2
+        }
+      ]
+    },
+    "values": {
+      "money": 9,
+      "rd": 5,
+      "crew": 3,
+      "repair": 9
+    },
+    "flavor": "Alan Shepard"
+  },
+  {
+    "id": "10H",
+    "suit": "H",
+    "rank": 10,
+    "s": 10,
+    "kind": "person",
+    "named": {
+      "name": "John Glenn",
+      "role": "astronaut",
+      "abilities": [
+        {
+          "kind": "phaseBoost",
+          "phases": [
+            "Orbit"
+          ],
+          "amount": 2
+        }
+      ]
+    },
+    "values": {
+      "money": 10,
+      "rd": 5,
+      "crew": 4,
+      "repair": 10
+    },
+    "flavor": "John Glenn"
+  },
+  {
+    "id": "JH",
+    "suit": "H",
+    "rank": "J",
+    "s": 10,
+    "kind": "person",
+    "named": {
+      "name": "Gus Grissom",
+      "role": "astronaut",
+      "abilities": [
+        {
+          "kind": "phaseBoost",
+          "phases": "all",
+          "amount": 1
+        }
+      ]
+    },
+    "values": {
+      "money": 10,
+      "rd": 5,
+      "crew": 4,
+      "repair": 10
+    },
+    "flavor": "Gus Grissom"
+  },
+  {
+    "id": "QH",
+    "suit": "H",
+    "rank": "Q",
+    "s": 10,
+    "kind": "person",
+    "named": {
+      "name": "Ed White",
+      "role": "astronaut",
+      "abilities": [
+        {
+          "kind": "phaseBoost",
+          "phases": [
+            "EVA"
+          ],
+          "amount": 2
+        }
+      ]
+    },
+    "values": {
+      "money": 10,
+      "rd": 5,
+      "crew": 4,
+      "repair": 10
+    },
+    "flavor": "Ed White"
+  },
+  {
+    "id": "KH",
+    "suit": "H",
+    "rank": "K",
+    "s": 10,
+    "kind": "person",
+    "named": {
+      "name": "Neil Armstrong",
+      "role": "astronaut",
+      "abilities": [
+        {
+          "kind": "phaseBoost",
+          "phases": [
+            "Landing",
+            "Ascent"
+          ],
+          "amount": 2
+        }
+      ]
+    },
+    "values": {
+      "money": 10,
+      "rd": 5,
+      "crew": 4,
+      "repair": 10
+    },
+    "flavor": "Neil Armstrong"
+  },
+  {
+    "id": "AH",
+    "suit": "H",
+    "rank": "A",
+    "s": 12,
+    "kind": "sideMission",
+    "sideMission": {
+      "name": "The New Nine",
+      "perk": {
+        "kind": "crewBonusAdd",
+        "amount": 1
+      }
+    },
+    "values": {
+      "money": 12,
+      "rd": 6
+    },
+    "flavor": "Side Mission: The New Nine"
+  },
+  {
+    "id": "2D",
+    "suit": "D",
+    "rank": 2,
+    "s": 2,
+    "kind": "bonus",
+    "values": {
+      "money": 2,
+      "rd": 1,
+      "bonus": 1
+    },
+    "flavor": "Small Grant"
+  },
+  {
+    "id": "3D",
+    "suit": "D",
+    "rank": 3,
+    "s": 3,
+    "kind": "bonus",
+    "values": {
+      "money": 3,
+      "rd": 2,
+      "bonus": 2
+    },
+    "flavor": "Public Support"
+  },
+  {
+    "id": "4D",
+    "suit": "D",
+    "rank": 4,
+    "s": 4,
+    "kind": "bonus",
+    "values": {
+      "money": 4,
+      "rd": 2,
+      "bonus": 2
+    },
+    "flavor": "Media Coverage"
+  },
+  {
+    "id": "5D",
+    "suit": "D",
+    "rank": 5,
+    "s": 5,
+    "kind": "bonus",
+    "values": {
+      "money": 5,
+      "rd": 3,
+      "bonus": 3
+    },
+    "flavor": "Budget Allocation"
+  },
+  {
+    "id": "6D",
+    "suit": "D",
+    "rank": 6,
+    "s": 6,
+    "kind": "bonus",
+    "values": {
+      "money": 6,
+      "rd": 3,
+      "bonus": 3
+    },
+    "flavor": "Budget Allocation"
+  },
+  {
+    "id": "7D",
+    "suit": "D",
+    "rank": 7,
+    "s": 7,
+    "kind": "bonus",
+    "values": {
+      "money": 7,
+      "rd": 4,
+      "bonus": 4
+    },
+    "flavor": "Congressional Funding"
+  },
+  {
+    "id": "8D",
+    "suit": "D",
+    "rank": 8,
+    "s": 8,
+    "kind": "bonus",
+    "values": {
+      "money": 8,
+      "rd": 4,
+      "bonus": 4
+    },
+    "flavor": "Congressional Funding"
+  },
+  {
+    "id": "9D",
+    "suit": "D",
+    "rank": 9,
+    "s": 9,
+    "kind": "bonus",
+    "values": {
+      "money": 9,
+      "rd": 5,
+      "bonus": 5
+    },
+    "flavor": "Presidential Mandate"
+  },
+  {
+    "id": "10D",
+    "suit": "D",
+    "rank": 10,
+    "s": 10,
+    "kind": "bonus",
+    "values": {
+      "money": 10,
+      "rd": 5,
+      "bonus": 5
+    },
+    "flavor": "Presidential Mandate"
+  },
+  {
+    "id": "JD",
+    "suit": "D",
+    "rank": "J",
+    "s": 10,
+    "kind": "person",
+    "named": {
+      "name": "Frank Borman",
+      "role": "astronaut",
+      "abilities": [
+        {
+          "kind": "phaseBoost",
+          "phases": [
+            "TLI/Coast"
+          ],
+          "amount": 2
+        }
+      ]
+    },
+    "values": {
+      "money": 10,
+      "rd": 5,
+      "crew": 4,
+      "repair": 10
+    },
+    "flavor": "Frank Borman"
+  },
+  {
+    "id": "QD",
+    "suit": "D",
+    "rank": "Q",
+    "s": 10,
+    "kind": "person",
+    "named": {
+      "name": "Buzz Aldrin",
+      "role": "astronaut",
+      "abilities": [
+        {
+          "kind": "phaseBoost",
+          "phases": [
+            "Rendezvous",
+            "EVA"
+          ],
+          "amount": 2
+        }
+      ]
+    },
+    "values": {
+      "money": 10,
+      "rd": 5,
+      "crew": 4,
+      "repair": 10
+    },
+    "flavor": "Buzz Aldrin"
+  },
+  {
+    "id": "KD",
+    "suit": "D",
+    "rank": "K",
+    "s": 10,
+    "kind": "person",
+    "named": {
+      "name": "Michael Collins",
+      "role": "astronaut",
+      "abilities": [
+        {
+          "kind": "phaseBoost",
+          "phases": [
+            "Lunar Orbit",
+            "Reentry"
+          ],
+          "amount": 2
+        }
+      ]
+    },
+    "values": {
+      "money": 10,
+      "rd": 5,
+      "crew": 4,
+      "repair": 10
+    },
+    "flavor": "Michael Collins"
+  },
+  {
+    "id": "AD",
+    "suit": "D",
+    "rank": "A",
+    "s": 12,
+    "kind": "sideMission",
+    "sideMission": {
+      "name": "Telstar",
+      "perk": {
+        "kind": "yearEndMoney",
+        "amount": 2
+      }
+    },
+    "values": {
+      "money": 12,
+      "rd": 6
+    },
+    "flavor": "Side Mission: Telstar"
+  },
+  {
+    "id": "2S",
+    "suit": "S",
+    "rank": 2,
+    "s": 2,
+    "kind": "equipment",
+    "values": {
+      "money": 2,
+      "rd": 1,
+      "repair": 2
+    },
+    "flavor": "Spare Parts"
+  },
+  {
+    "id": "3S",
+    "suit": "S",
+    "rank": 3,
+    "s": 3,
+    "kind": "equipment",
+    "values": {
+      "money": 3,
+      "rd": 2,
+      "repair": 3
+    },
+    "flavor": "Ground Support Equipment"
+  },
+  {
+    "id": "4S",
+    "suit": "S",
+    "rank": 4,
+    "s": 4,
+    "kind": "equipment",
+    "values": {
+      "money": 4,
+      "rd": 2,
+      "repair": 4
+    },
+    "flavor": "Tool Kit"
+  },
+  {
+    "id": "5S",
+    "suit": "S",
+    "rank": 5,
+    "s": 5,
+    "kind": "equipment",
+    "values": {
+      "money": 5,
+      "rd": 3,
+      "repair": 5
+    },
+    "flavor": "Life Support Pack"
+  },
+  {
+    "id": "6S",
+    "suit": "S",
+    "rank": 6,
+    "s": 6,
+    "kind": "equipment",
+    "values": {
+      "money": 6,
+      "rd": 3,
+      "repair": 6
+    },
+    "flavor": "Recovery Beacon"
+  },
+  {
+    "id": "7S",
+    "suit": "S",
+    "rank": 7,
+    "s": 7,
+    "kind": "equipment",
+    "values": {
+      "money": 7,
+      "rd": 4,
+      "repair": 7
+    },
+    "flavor": "Parachute Pack"
+  },
+  {
+    "id": "8S",
+    "suit": "S",
+    "rank": 8,
+    "s": 8,
+    "kind": "equipment",
+    "values": {
+      "money": 8,
+      "rd": 4,
+      "repair": 8
+    },
+    "flavor": "Thermal Blankets"
+  },
+  {
+    "id": "9S",
+    "suit": "S",
+    "rank": 9,
+    "s": 9,
+    "kind": "equipment",
+    "values": {
+      "money": 9,
+      "rd": 5,
+      "repair": 9
+    },
+    "flavor": "Guidance Cartridge"
+  },
+  {
+    "id": "10S",
+    "suit": "S",
+    "rank": 10,
+    "s": 10,
+    "kind": "equipment",
+    "values": {
+      "money": 10,
+      "rd": 5,
+      "repair": 10
+    },
+    "flavor": "Backup Systems"
+  },
+  {
+    "id": "JS",
+    "suit": "S",
+    "rank": "J",
+    "s": 10,
+    "kind": "person",
+    "named": {
+      "name": "John Houbolt",
+      "role": "tech",
+      "abilities": [
+        {
+          "kind": "devDiscount",
+          "domains": [
+            "lm",
+            "agena"
+          ],
+          "amount": 2
+        },
+        {
+          "kind": "phaseBoost",
+          "phases": [
+            "Lunar Orbit"
+          ],
+          "amount": 1
+        }
+      ]
+    },
+    "values": {
+      "money": 10,
+      "rd": 5,
+      "crew": 4,
+      "repair": 10
+    },
+    "flavor": "John Houbolt"
+  },
+  {
+    "id": "QS",
+    "suit": "S",
+    "rank": "Q",
+    "s": 10,
+    "kind": "person",
+    "named": {
+      "name": "Margaret Hamilton",
+      "role": "tech",
+      "abilities": [
+        {
+          "kind": "devDiscount",
+          "domains": "any",
+          "amount": 2,
+          "perTurn": true
+        },
+        {
+          "kind": "phaseBoost",
+          "phases": [
+            "Landing",
+            "Reentry"
+          ],
+          "amount": 2
+        }
+      ]
+    },
+    "values": {
+      "money": 10,
+      "rd": 5,
+      "crew": 4,
+      "repair": 10
+    },
+    "flavor": "Margaret Hamilton"
+  },
+  {
+    "id": "KS",
+    "suit": "S",
+    "rank": "K",
+    "s": 10,
+    "kind": "person",
+    "named": {
+      "name": "Wernher von Braun",
+      "role": "tech",
+      "abilities": [
+        {
+          "kind": "devDiscount",
+          "domains": [
+            "propulsion"
+          ],
+          "amount": 2
+        },
+        {
+          "kind": "phaseBoost",
+          "phases": [
+            "Launch"
+          ],
+          "amount": 1
+        }
+      ]
+    },
+    "values": {
+      "money": 10,
+      "rd": 5,
+      "crew": 4,
+      "repair": 10
+    },
+    "flavor": "Wernher von Braun"
+  },
+  {
+    "id": "AS",
+    "suit": "S",
+    "rank": "A",
+    "s": 12,
+    "kind": "sideMission",
+    "sideMission": {
+      "name": "Deep Space Network",
+      "perk": {
+        "kind": "phaseDrawAdd",
+        "amount": 1
+      }
+    },
+    "values": {
+      "money": 12,
+      "rd": 6
+    },
+    "flavor": "Side Mission: Deep Space Network"
+  },
+  {
+    "id": "2C",
+    "suit": "C",
+    "rank": 2,
+    "s": 2,
+    "kind": "action",
+    "values": {
+      "money": 2,
+      "rd": 1
+    },
+    "flavor": "Schedule Surge"
+  },
+  {
+    "id": "3C",
+    "suit": "C",
+    "rank": 3,
+    "s": 3,
+    "kind": "action",
+    "values": {
+      "money": 3,
+      "rd": 2
+    },
+    "flavor": "Overtime Shift"
+  },
+  {
+    "id": "4C",
+    "suit": "C",
+    "rank": 4,
+    "s": 4,
+    "kind": "action",
+    "values": {
+      "money": 4,
+      "rd": 2
+    },
+    "flavor": "Parallel Testing"
+  },
+  {
+    "id": "5C",
+    "suit": "C",
+    "rank": 5,
+    "s": 5,
+    "kind": "action",
+    "values": {
+      "money": 5,
+      "rd": 3
+    },
+    "flavor": "Mission Planning"
+  },
+  {
+    "id": "6C",
+    "suit": "C",
+    "rank": 6,
+    "s": 6,
+    "kind": "action",
+    "values": {
+      "money": 6,
+      "rd": 3
+    },
+    "flavor": "Staff Reorganization"
+  },
+  {
+    "id": "7C",
+    "suit": "C",
+    "rank": 7,
+    "s": 7,
+    "kind": "action",
+    "values": {
+      "money": 7,
+      "rd": 4
+    },
+    "flavor": "Management Push"
+  },
+  {
+    "id": "8C",
+    "suit": "C",
+    "rank": 8,
+    "s": 8,
+    "kind": "action",
+    "values": {
+      "money": 8,
+      "rd": 4
+    },
+    "flavor": "Presidential Priority"
+  },
+  {
+    "id": "9C",
+    "suit": "C",
+    "rank": 9,
+    "s": 9,
+    "kind": "person",
+    "named": {
+      "name": "Max Faget",
+      "role": "tech",
+      "abilities": [
+        {
+          "kind": "devDiscount",
+          "domains": [
+            "csm",
+            "mercury",
+            "gemini"
+          ],
+          "amount": 2
+        },
+        {
+          "kind": "phaseBoost",
+          "phases": [
+            "Reentry"
+          ],
+          "amount": 1
+        }
+      ]
+    },
+    "values": {
+      "money": 9,
+      "rd": 5,
+      "crew": 3,
+      "repair": 9
+    },
+    "flavor": "Max Faget"
+  },
+  {
+    "id": "10C",
+    "suit": "C",
+    "rank": 10,
+    "s": 10,
+    "kind": "person",
+    "named": {
+      "name": "Robert Gilruth",
+      "role": "tech",
+      "abilities": [
+        {
+          "kind": "devDiscount",
+          "domains": [
+            "capsule"
+          ],
+          "amount": 2
+        },
+        {
+          "kind": "phaseBoost",
+          "phases": [
+            "Splashdown"
+          ],
+          "amount": 1
+        }
+      ]
+    },
+    "values": {
+      "money": 10,
+      "rd": 5,
+      "crew": 4,
+      "repair": 10
+    },
+    "flavor": "Robert Gilruth"
+  },
+  {
+    "id": "JC",
+    "suit": "C",
+    "rank": "J",
+    "s": 10,
+    "kind": "person",
+    "named": {
+      "name": "Kurt Debus",
+      "role": "tech",
+      "abilities": [
+        {
+          "kind": "devDiscount",
+          "domains": "any",
+          "amount": 1
+        },
+        {
+          "kind": "phaseBoost",
+          "phases": [
+            "Pre-launch"
+          ],
+          "amount": 2
+        }
+      ]
+    },
+    "values": {
+      "money": 10,
+      "rd": 5,
+      "crew": 4,
+      "repair": 10
+    },
+    "flavor": "Kurt Debus"
+  },
+  {
+    "id": "QC",
+    "suit": "C",
+    "rank": "Q",
+    "s": 10,
+    "kind": "person",
+    "named": {
+      "name": "Chris Kraft",
+      "role": "tech",
+      "abilities": [
+        {
+          "kind": "kraft",
+          "amount": 2
+        }
+      ]
+    },
+    "values": {
+      "money": 10,
+      "rd": 5,
+      "crew": 4,
+      "repair": 10
+    },
+    "flavor": "Chris Kraft"
+  },
+  {
+    "id": "KC",
+    "suit": "C",
+    "rank": "K",
+    "s": 10,
+    "kind": "person",
+    "named": {
+      "name": "Gene Kranz",
+      "role": "tech",
+      "abilities": [
+        {
+          "kind": "reroll"
+        }
+      ]
+    },
+    "values": {
+      "money": 10,
+      "rd": 5,
+      "crew": 4,
+      "repair": 10
+    },
+    "flavor": "Gene Kranz"
+  },
+  {
+    "id": "AC",
+    "suit": "C",
+    "rank": "A",
+    "s": 12,
+    "kind": "sideMission",
+    "sideMission": {
+      "name": "Unmanned Test Program",
+      "perk": {
+        "kind": "firstMissionDifficulty",
+        "amount": -1
+      }
+    },
+    "values": {
+      "money": 12,
+      "rd": 6
+    },
+    "flavor": "Side Mission: Unmanned Test Program"
+  },
+  {
+    "id": "JOKER-A",
+    "suit": "JOKER",
+    "rank": "J",
+    "s": 0,
+    "kind": "event",
+    "values": {
+      "money": 0,
+      "rd": 0
+    },
+    "flavor": "News Event — roll d6"
+  },
+  {
+    "id": "JOKER-B",
+    "suit": "JOKER",
+    "rank": "J",
+    "s": 0,
+    "kind": "event",
+    "values": {
+      "money": 0,
+      "rd": 0
+    },
+    "flavor": "News Event — roll d6"
+  }
+]

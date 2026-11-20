@@ -1,0 +1,35 @@
+[
+  {
+    "face": 1,
+    "name": "Gagarin Orbits!",
+    "effects": [{ "type": "sovietShift", "amount": 3 }]
+  },
+  {
+    "face": 2,
+    "name": "Soviet Lunar Probe",
+    "effects": [{ "type": "sovietShift", "amount": 2 }]
+  },
+  {
+    "face": 3,
+    "name": "Apollo 1 Fire",
+    "effects": [
+      { "type": "loseActions", "amount": 2 },
+      { "type": "stunCrew", "launches": 1 }
+    ]
+  },
+  {
+    "face": 4,
+    "name": "Kennedy's Moon Speech",
+    "effects": [{ "type": "rdGain", "amount": 4 }]
+  },
+  {
+    "face": 5,
+    "name": "Congressional Windfall",
+    "effects": [{ "type": "moneyGain", "amount": 6 }]
+  },
+  {
+    "face": 6,
+    "name": "Soyuz 1 Setback",
+    "effects": [{ "type": "sovietShift", "amount": -3 }]
+  }
+]

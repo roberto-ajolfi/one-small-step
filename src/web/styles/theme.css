@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Tailwind entry (spec §7 "UI styling"): base resets, a couple of composed
+ * component classes, and the print layer. Everything else is utility classes in
+ * the components — no ad-hoc stylesheets beyond this file.
+ */
+
+@layer base {
+  body {
+    @apply bg-paper text-ink font-body antialiased;
+  }
+
+  /* Spec §7 a11y: visible focus rings on every interactive element. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-patch-gold ring-offset-2 ring-offset-paper;
+  }
+
+  /* Board title treatment — the poster masthead from the printable kit. */
+  h1,
+  h2,
+  h3 {
+    @apply font-display uppercase;
+  }
+}
+
+@layer components {
+  /* Uppercase micro-label used across panel headers and counters. */
+  .eyebrow {
+    @apply font-body text-label font-semibold uppercase text-ink-faint;
+  }
+
+  /* Engraved rule under a panel heading (mirrors the kit's 1pt underlines). */
+  .rule {
+    @apply border-b border-ink/25 pb-1;
+  }
+}
+
+/* The screen board becomes a readable sheet on paper (spec §7 theme). */
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+  }
+}

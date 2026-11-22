@@ -23,19 +23,19 @@ function jokerDraw(face: number, patch: Partial<GameState> = {}): GameState {
 }
 
 describe('event table (FR9.2)', () => {
-  it('1 Gagarin Orbits: Soviet +3 (crosses milestone 3 → −1 VP)', () => {
+  it('1 Gagarin Orbits: Soviet +6 (crosses milestones 3 and 6 → −2 VP)', () => {
     const d = jokerDraw(1);
     resolveJokerDraw(d, 'JOKER-A');
-    expect(d.soviet.position).toBe(3);
-    expect(d.vp.penaltyMilestones).toBe(1);
+    expect(d.soviet.position).toBe(6);
+    expect(d.vp.penaltyMilestones).toBe(2);
     expect(d.discard).toContain('JOKER-A');
   });
 
-  it('2 Soviet Lunar Probe: Soviet +2 (below the first milestone)', () => {
+  it('2 Soviet Lunar Probe: Soviet +4 (crosses milestone 3 → −1 VP)', () => {
     const d = jokerDraw(2);
     resolveJokerDraw(d, 'JOKER-A');
-    expect(d.soviet.position).toBe(2);
-    expect(d.vp.penaltyMilestones).toBe(0);
+    expect(d.soviet.position).toBe(4);
+    expect(d.vp.penaltyMilestones).toBe(1);
   });
 
   it('3 Apollo 1 Fire: −2 actions next turn + ready crew stunned 1 launch', () => {

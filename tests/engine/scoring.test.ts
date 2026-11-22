@@ -26,19 +26,19 @@ describe('scoreGame (FR10)', () => {
   it('moon tier bands at exact boundaries (FR10.2)', () => {
     const at = (vp: number) =>
       scoreGame(withVp(finished(base(), 'moon'), { mission: vp })).tier;
-    expect(at(70)).toBe('Distinguished Service Medal');
-    expect(at(69)).toBe('NASA Administrator');
-    expect(at(55)).toBe('NASA Administrator');
-    expect(at(54)).toBe('Mission Accomplished');
+    expect(at(75)).toBe('Distinguished Service Medal');
+    expect(at(74)).toBe('NASA Administrator');
+    expect(at(65)).toBe('NASA Administrator');
+    expect(at(64)).toBe('Mission Accomplished');
   });
 
   it('timedOut tier bands at exact boundaries (FR10.2)', () => {
     const at = (vp: number) =>
       scoreGame(withVp(finished(base(), 'timedOut'), { mission: vp })).tier;
-    expect(at(45)).toBe('Honorable Mention');
-    expect(at(44)).toBe('Good Effort');
-    expect(at(30)).toBe('Good Effort');
-    expect(at(29)).toBe('Budget Overrun');
+    expect(at(55)).toBe('Honorable Mention');
+    expect(at(54)).toBe('Good Effort');
+    expect(at(45)).toBe('Good Effort');
+    expect(at(44)).toBe('Budget Overrun');
   });
 
   it('maximum achievable score is 87 (ruling 25: 61 + 10 + 16)', () => {
@@ -48,7 +48,7 @@ describe('scoreGame (FR10)', () => {
       4 * 2 * TEST_CONTENT.tuning.sideMissionVp; // 4 aces × 2 copies
     expect(max).toBe(87);
     // The kit's printed 69/79 totals are typos; tiers need the full range.
-    expect(max).toBeGreaterThanOrEqual(70);
+    expect(max).toBeGreaterThanOrEqual(75);
   });
 
   it('sovietsWon honors no score (FR10.3)', () => {

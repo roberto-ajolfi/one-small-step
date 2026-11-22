@@ -24,19 +24,19 @@ const FR51_LADDER = [
   ['apollo-11', 1969, 8, 10],
 ] as const;
 
-/** [id, rdCost, moneyCost] per FR4.2. */
+/** [id, rdCost, moneyCost] per FR4.2 (harness-calibrated costs, M3 tuning pass). */
 const FR42_COSTS: Record<string, [number, number]> = {
-  redstone: [2, 2],
-  atlas: [3, 3],
-  mercury: [3, 2],
-  titan: [3, 3],
-  gemini: [4, 3],
-  agena: [2, 2],
-  'saturn-ib': [4, 4],
-  'saturn-v': [7, 7],
-  csm: [5, 4],
-  lm: [5, 5],
-  'eva-suit': [2, 1],
+  redstone: [5, 5],
+  atlas: [8, 8],
+  mercury: [8, 5],
+  titan: [8, 8],
+  gemini: [10, 8],
+  agena: [5, 5],
+  'saturn-ib': [10, 10],
+  'saturn-v': [18, 18],
+  csm: [12, 10],
+  lm: [12, 12],
+  'eva-suit': [5, 2],
 };
 
 describe('campaign ladder (FR5)', () => {
@@ -101,12 +101,12 @@ describe('tech tree (FR4)', () => {
 describe('event table (FR9)', () => {
   it('matches the FR9.2 d6 rows: names and effects', () => {
     expect(content.events.map((e) => [e.face, e.name, e.effects])).toEqual([
-      [1, 'Gagarin Orbits!', [{ type: 'sovietShift', amount: 3 }]],
-      [2, 'Soviet Lunar Probe', [{ type: 'sovietShift', amount: 2 }]],
+      [1, 'Gagarin Orbits!', [{ type: 'sovietShift', amount: 6 }]],
+      [2, 'Soviet Lunar Probe', [{ type: 'sovietShift', amount: 4 }]],
       [3, 'Apollo 1 Fire', [{ type: 'loseActions', amount: 2 }, { type: 'stunCrew', launches: 1 }]],
       [4, "Kennedy's Moon Speech", [{ type: 'rdGain', amount: 4 }]],
       [5, 'Congressional Windfall', [{ type: 'moneyGain', amount: 6 }]],
-      [6, 'Soyuz 1 Setback', [{ type: 'sovietShift', amount: -3 }]],
+      [6, 'Soyuz 1 Setback', [{ type: 'sovietShift', amount: -2 }]],
     ]);
   });
 });

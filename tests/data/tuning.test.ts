@@ -78,10 +78,10 @@ describe('scoring (FR10)', () => {
     expect(t.programBonuses).toEqual({ mercury: 2, gemini: 3, apollo: 5 });
   });
 
-  it('named victory tiers at 70/55 on a landing, 45/30 timed out (FR10.2)', () => {
+  it('named victory tiers slice the harness score distribution (FR10.2, M3)', () => {
     expect(t.tierThresholds).toEqual({
-      moon: { distinguished: 70, administrator: 55 },
-      timedOut: { honorable: 45, good: 30 },
+      moon: { distinguished: 75, administrator: 65 },
+      timedOut: { honorable: 55, good: 45 },
     });
   });
 

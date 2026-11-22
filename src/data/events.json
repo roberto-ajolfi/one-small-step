@@ -2,12 +2,12 @@
   {
     "face": 1,
     "name": "Gagarin Orbits!",
-    "effects": [{ "type": "sovietShift", "amount": 3 }]
+    "effects": [{ "type": "sovietShift", "amount": 6 }]
   },
   {
     "face": 2,
     "name": "Soviet Lunar Probe",
-    "effects": [{ "type": "sovietShift", "amount": 2 }]
+    "effects": [{ "type": "sovietShift", "amount": 4 }]
   },
   {
     "face": 3,
@@ -30,6 +30,6 @@
   {
     "face": 6,
     "name": "Soyuz 1 Setback",
-    "effects": [{ "type": "sovietShift", "amount": -3 }]
+    "effects": [{ "type": "sovietShift", "amount": -2 }]
   }
 ]

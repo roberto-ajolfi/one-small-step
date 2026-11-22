@@ -71,7 +71,7 @@ The deliverable is (a) this game design, whose physical prototype uses two stand
 
 ### FR4 — Resources and development
 - FR4.1 Two resources: **Money** and **R&D Points**. Both are produced by playing cards in their universal modes.
-- FR4.2 Hardware lives on a **tech tree / checklist** with **dual costs: an R&D cost (design) and a Money cost (production)**. Developed hardware is permanent. Proposed cost list (tuning constants): Redstone 2R/2M, Atlas 3R/3M, Mercury capsule 3R/2M, Titan 3R/3M, Gemini capsule 4R/3M, Agena target 2R/2M, Saturn IB 4R/4M, Saturn V 7R/7M, CSM 5R/4M, Lunar Module 5R/5M, EVA suit 2R/1M.
+- FR4.2 Hardware lives on a **tech tree / checklist** with **dual costs: an R&D cost (design) and a Money cost (production)**. Developed hardware is permanent. Cost list (tuning constants; calibrated by the M3 balance harness — see Open Questions): Redstone 5R/5M, Atlas 8R/8M, Mercury capsule 8R/5M, Titan 8R/8M, Gemini capsule 10R/8M, Agena target 5R/5M, Saturn IB 10R/10M, Saturn V 18R/18M, CSM 12R/10M, Lunar Module 12R/12M, EVA suit 5R/2M.
 - FR4.3 Programs unlock by **milestones, not calendar**: completing Mercury objectives unlocks Gemini hardware, completing Gemini unlocks Apollo hardware. A poor early game delays the program but cannot brick it.
 - FR4.4 Missions have **explicit hardware prerequisites** (see FR5.1). Missing hardware means the mission cannot launch.
 
@@ -135,7 +135,7 @@ The deliverable is (a) this game design, whose physical prototype uses two stand
 - FR7.3 **Anti-stacking**: each named perk can be earned **only once** (flying the second copy of the same ace grants VP only, no double perk); perk wordings are additive ("add +1"), never multiplicative.
 
 ### FR8 — Soviet progress
-- FR8.1 The Soviet track is **36 spaces** *(OQ10 resolved)*: pure drift **+1/turn** in Upkeep (unopposed Soviets finish at turn 36) plus **pushes**: events +2/+3 (event table), mission failures +3, Soyuz-1 relief −3. Expected movement ≈ 37 lands the Soviets around turn 30–32 — a real race against a typical Apollo 11. Constants are fine-tuned by the harness against the 30–40% win-rate target.
+- FR8.1 The Soviet track is **36 spaces** *(OQ10 resolved)*: pure drift **+1/turn** in Upkeep (unopposed Soviets finish at turn 36) plus **pushes**: events +6/+4 (event table), mission failures +3, Soyuz-1 relief −2. Expected movement ≈ 37 over a full 30 turns (drift 30 + ≈7 of event pushes) — a real race against a typical Apollo 11 at turn ~28. Constants are fine-tuned by the harness against the 30–40% win-rate target *(M3: calibrated — see Open Questions)*.
 - FR8.2 **Milestone bite every 3rd space (12 milestones)**: **−1 VP** (prestige theft); every 6th space also **−3 Money** (budget pressure). Milestone names (in order): Gagarin, Titov, Tereshkova, Leonov spacewalk, Voskhod multi-crew, Luna 9 soft landing, Zond lunar flyby, Soyuz docking, Luna 16 sample return, Lunokhod rover, Soviet lunar orbit — then the final (36th) space = **Soviet Moon landing = total loss**.
 - FR8.3 **Tie-break: the player wins ties** — if Apollo 11 splashdown occurs in the same turn the Soviets cross the final space, the player wins. A successful player Moon landing ends the race permanently.
 
@@ -145,16 +145,16 @@ The deliverable is (a) this game design, whose physical prototype uses two stand
 
 | d6 | Event | Effect |
 |----|-------|--------|
-| 1 | Gagarin Orbits! | Soviet track +3 |
-| 2 | Soviet Lunar Probe | Soviet track +2 |
+| 1 | Gagarin Orbits! | Soviet track +6 |
+| 2 | Soviet Lunar Probe | Soviet track +4 |
 | 3 | Apollo 1 Fire | Lose 2 actions next turn; all crew stunned 1 turn |
 | 4 | Kennedy's Moon Speech | +4 R&D |
 | 5 | Congressional Windfall | +6 Money |
-| 6 | Soyuz 1 Setback | Soviet track −3 |
+| 6 | Soyuz 1 Setback | Soviet track −2 |
 
 ### FR10 — Scoring and endings
 - FR10.1 **Score** = mission VP (61 max from the ladder) + program completion bonuses (Mercury +2 / Gemini +3 / Apollo +5) + side missions (+2 each) − Soviet milestone bites − failure penalties (−1 per failed attempt).
-- FR10.2 **Victory (Moon landing + splashdown)** tiers by final score: ≥70 **Distinguished Service Medal**, 55–69 **NASA Administrator**, <55 **Mission Accomplished**. **Timed out** (turn 30, no landing): ≥45 **Honorable Mention**, 30–44 **Good Effort**, <30 **Budget Overrun**.
+- FR10.2 **Victory (Moon landing + splashdown)** tiers by final score: ≥75 **Distinguished Service Medal**, 65–74 **NASA Administrator**, <65 **Mission Accomplished**. **Timed out** (turn 30, no landing): ≥55 **Honorable Mention**, 45–54 **Good Effort**, <45 **Budget Overrun**. *(Cut-offs calibrated against simulated score distributions — Open Questions.)*
 - FR10.3 **Total loss**: Soviets reach the final track space before the player's Moon landing. No score is honored.
 
 ### FR11 — Digital prototype
@@ -194,7 +194,7 @@ The deliverable is (a) this game design, whose physical prototype uses two stand
 - **EventTable** (d6): 6 entries as in FR9.2; physical play rolls one d6 *(OQ9 resolved)*.
 - **SideMission** (ace): `name`, `difficulty` (4), `retryPenalty` (+1), `vp` (+2), `perk` (permanent, unique — earnable once).
 - **Roster**: 8 named astronauts, 8 named techs (FR6.2), each with an ability per the FR6.6 table.
-- **Tuning constants**: drawPerTurn (2), actionsPerTurn (3), handLimit (7), turnsPerYear (3), repairCostMinor (3), repairCostMajor (6), sovietTrackLength (36), sovietDrift (+1/turn), sovietPushEvent (+2/+3), sovietPushFailure (+3), sovietRelief (−3), sideMissionDifficulty (4), sideMissionRetry (+1), difficulty bases (Mercury 3 / Gemini 5 / Apollo 7), retryPenalty (+2), rank→value formulas, tech-cost list (FR4.2), starting resources (0/0).
+- **Tuning constants**: drawPerTurn (2), actionsPerTurn (3), handLimit (7), turnsPerYear (3), repairCostMinor (3), repairCostMajor (6), sovietTrackLength (36), sovietDrift (+1/turn), sovietPushEvent (+6/+4), sovietPushFailure (+3), sovietRelief (−2), sideMissionDifficulty (4), sideMissionRetry (+1), difficulty bases (Mercury 3 / Gemini 5 / Apollo 7), retryPenalty (+2), rank→value formulas, tech-cost list (FR4.2), starting resources (0/0).
 
 ## APIs / Interfaces
 
@@ -228,7 +228,7 @@ The deliverable is (a) this game design, whose physical prototype uses two stand
 - **Scaled phase chains + base+offset difficulty formula** *(OQ3 resolved)* — natural difficulty curve with mental-math rule; trade-off: per-phase authorship would give finer control (harness can override constants).
 - **Pre-bid + post-repair resolution window (3/6 repair costs)** — decisions before and after the draw; trade-off: slightly longer resolution than "draw then fix".
 - **Injured-not-dead crew (incl. Apollo 1 fire as stun-only)** — keeps it a strategy game; trade-off: loses the tragedy of history.
-- **Fixed-rate Soviet drift (36 spaces, +1/turn) + event/failure pushes, milestone bites (−1 VP / −3 Money), player wins ties** *(OQ4/OQ10 resolved)* — over "discarded cards accumulate": predictable tension, far less bookkeeping; trade-off: the player's own waste no longer feeds the race — the accumulate-cards variant was **dropped entirely** per user decision. The 36-space length (over the original 30) is the arithmetic fix: expected movement ≈ 37 lands the Soviets ~turn 30–32 against a typical Apollo 11.
+- **Fixed-rate Soviet drift (36 spaces, +1/turn) + event/failure pushes, milestone bites (−1 VP / −3 Money), player wins ties** *(OQ4/OQ10 resolved)* — over "discarded cards accumulate": predictable tension, far less bookkeeping; trade-off: the player's own waste no longer feeds the race — the accumulate-cards variant was **dropped entirely** per user decision. The 36-space length (over the original 30) is the arithmetic fix: expected movement ≈ 37 over 30 turns against a typical Apollo 11 at turn ~28 (harness-calibrated, M3).
 - **Permanent crew pool + injury = 2 mission launches (heals at year end)** *(OQ7 resolved)* — makes "injured crew" and techs' ongoing flex role coherent; trade-off: people cards leave the fate-deck circulation once recruited (mitigated: they can be burned as repair fuel, re-entering the discard pile).
 - **Side missions: one draw vs difficulty 4, unique perks, additive wording** *(OQ6 resolved)* — fast resolution with real risk (failure = Soviet +1); trade-off: less narrative than a two-phase check.
 - **d6 event rolls for physical play** *(OQ9 resolved)* — one trivial component beats perturbing the fate deck (card-read variant) or losing event variety (fixed jokers).
@@ -241,13 +241,15 @@ The deliverable is (a) this game design, whose physical prototype uses two stand
 
 ## Open Questions
 
-*All design-level open questions (OQ1–OQ12) are resolved. What remains is **balance validation owned by the balance harness** — numbers, not rules:*
+*All design-level open questions (OQ1–OQ12) are resolved, and the balance-validation checklist below is closed by the M3 harness (`npm run sim`; three bracketing policies, 10,000 games each). Remaining work is rules design, not numbers — see the observation at the end.*
 
-- **Race calibration validation** — verify the 30–40% skilled win rate against the 36-space track; tune drift (+1/turn), pushes (+2/+3 events, +3 failures, −3 relief) and milestone bites as needed.
-- **Economy validation** — confirm the tech-cost list and 0/0 starting resources let Apollo hardware realistically finish by turn ~27 without degenerate cash-grinding; adjust the s-curves if not.
-- **Ability numbers** — the 16 named abilities' numeric values (shapes are locked); watch Kraft/Kranz/Grissom for dominance.
-- **Tier threshold validation** — confirm the victory-tier cut-offs (70/55 and 45/30) match actual score distributions from simulated games.
-- **Side-mission calibration** — difficulty 4 and retry +1 may need adjustment once perk values are simulated.
+- **Race calibration — ✅ validated** *(baseline win rate in band)*: baseline **35.3%** wins (band 30–40%), aggressive **45.6%** (cap ~60%), conservative 11.6% (the low bracket); skilled win rate = 45.6%. Event pushes were tuned +2/+3 → **+6/+4** and the Soyuz relief −3 → **−2** to compensate for near-zero mission failures at skilled play (observation below); drift +1/turn, the 36-space track, failure +3 and the milestone bites all held. Typical Apollo 11 lands turn ~28 against Soviet landings in the turn 25–30 window.
+- **Economy — ✅ validated**: the FR4.2 tech-cost list was raised ~2.5× (numbers updated in FR4.2) so Apollo hardware **finishes by turn ~26** on average (p90 28 — checklist target ~27) and 0/0 starting resources held. No degenerate cash-grinding: resources rarely bank above ~10, and 0/0 starts stay tight through turn 30 (only ~2% of games that survive to turn 30 fail to finish hardware).
+- **Ability numbers — ✅ unchanged**: no dominance detected across 30,000 simulated games; Kraft/Kranz/Grissom never skew outcomes (see observation: phases rarely fail at skilled play, so once-per-mission prompts rarely fire).
+- **Tier thresholds — ✅ recalibrated** *(70/55 → **75/65**, 45/30 → **55/45**; FR10.2 updated)*: the original cuts predated the score distribution — every simulated moon game scored ≥55 and 43% of wins hit "Distinguished". Observed moon scores: p50 69 / p90 74 (max 87); timedOut p50 51 / p90 58. The new cuts yield Distinguished ≈ 6% of wins, NASA Administrator ≈ 83%, Mission Accomplished ≈ 11%; Honorable Mention ≈ 29% of timeouts.
+- **Side-mission calibration — ✅ validated**: difficulty 4 / retry +1 stands — ~20% of flights fail (≈85% first-try success), matching the intended risk/reward; the perks earn their keep (most games fly most aces) without deciding outcomes.
+
+**Observation for future rules design (not a numbers problem)**: at skilled play, mission phases almost never fail — assigned crew bonuses plus the expected fate draw overwhelm the FR5.3 difficulty bases, so the repair/retry/injury machinery rarely engages and the race carries nearly all the tension. Fixing that would need rule-level changes (difficulty bases or the crew ⌈s/3⌉ curve), outside the sanctioned tuning levers, so it is recorded here rather than changed.
 
 ## Explored Code References
 

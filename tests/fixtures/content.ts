@@ -169,28 +169,28 @@ const MISSIONS: Mission[] = [
 // --- tech tree (FR4.2) -----------------------------------------------------
 
 const TECH: TechItem[] = [
-  { id: 'redstone', name: 'Redstone', program: 'mercury', rdCost: 2, moneyCost: 2, tags: ['propulsion', 'mercury'] },
-  { id: 'atlas', name: 'Atlas', program: 'mercury', rdCost: 3, moneyCost: 3, tags: ['propulsion', 'mercury'] },
-  { id: 'mercury', name: 'Mercury capsule', program: 'mercury', rdCost: 3, moneyCost: 2, tags: ['capsule', 'mercury'] },
-  { id: 'titan', name: 'Titan', program: 'gemini', rdCost: 3, moneyCost: 3, tags: ['propulsion', 'gemini'], unlocksAfter: { program: 'mercury', minCompleted: 1 } },
-  { id: 'gemini', name: 'Gemini capsule', program: 'gemini', rdCost: 4, moneyCost: 3, tags: ['capsule', 'gemini'], unlocksAfter: { program: 'mercury', minCompleted: 1 } },
-  { id: 'agena', name: 'Agena target vehicle', program: 'gemini', rdCost: 2, moneyCost: 2, tags: ['agena', 'gemini'], unlocksAfter: { program: 'mercury', minCompleted: 1 } },
-  { id: 'saturn-ib', name: 'Saturn IB', program: 'apollo', rdCost: 4, moneyCost: 4, tags: ['propulsion', 'apollo'], unlocksAfter: { program: 'gemini', minCompleted: 1 } },
-  { id: 'saturn-v', name: 'Saturn V', program: 'apollo', rdCost: 7, moneyCost: 7, tags: ['propulsion', 'apollo'], unlocksAfter: { program: 'gemini', minCompleted: 1 } },
-  { id: 'csm', name: 'Command/Service Module', program: 'apollo', rdCost: 5, moneyCost: 4, tags: ['capsule', 'csm', 'apollo'], unlocksAfter: { program: 'gemini', minCompleted: 1 } },
-  { id: 'lm', name: 'Lunar Module', program: 'apollo', rdCost: 5, moneyCost: 5, tags: ['lm', 'apollo'], unlocksAfter: { program: 'gemini', minCompleted: 1 } },
-  { id: 'eva-suit', name: 'EVA suit', program: 'apollo', rdCost: 2, moneyCost: 1, tags: ['suit', 'apollo'], unlocksAfter: { program: 'gemini', minCompleted: 1 } },
+  { id: 'redstone', name: 'Redstone', program: 'mercury', rdCost: 5, moneyCost: 5, tags: ['propulsion', 'mercury'] },
+  { id: 'atlas', name: 'Atlas', program: 'mercury', rdCost: 8, moneyCost: 8, tags: ['propulsion', 'mercury'] },
+  { id: 'mercury', name: 'Mercury capsule', program: 'mercury', rdCost: 8, moneyCost: 5, tags: ['capsule', 'mercury'] },
+  { id: 'titan', name: 'Titan', program: 'gemini', rdCost: 8, moneyCost: 8, tags: ['propulsion', 'gemini'], unlocksAfter: { program: 'mercury', minCompleted: 1 } },
+  { id: 'gemini', name: 'Gemini capsule', program: 'gemini', rdCost: 10, moneyCost: 8, tags: ['capsule', 'gemini'], unlocksAfter: { program: 'mercury', minCompleted: 1 } },
+  { id: 'agena', name: 'Agena target vehicle', program: 'gemini', rdCost: 5, moneyCost: 5, tags: ['agena', 'gemini'], unlocksAfter: { program: 'mercury', minCompleted: 1 } },
+  { id: 'saturn-ib', name: 'Saturn IB', program: 'apollo', rdCost: 10, moneyCost: 10, tags: ['propulsion', 'apollo'], unlocksAfter: { program: 'gemini', minCompleted: 1 } },
+  { id: 'saturn-v', name: 'Saturn V', program: 'apollo', rdCost: 18, moneyCost: 18, tags: ['propulsion', 'apollo'], unlocksAfter: { program: 'gemini', minCompleted: 1 } },
+  { id: 'csm', name: 'Command/Service Module', program: 'apollo', rdCost: 12, moneyCost: 10, tags: ['capsule', 'csm', 'apollo'], unlocksAfter: { program: 'gemini', minCompleted: 1 } },
+  { id: 'lm', name: 'Lunar Module', program: 'apollo', rdCost: 12, moneyCost: 12, tags: ['lm', 'apollo'], unlocksAfter: { program: 'gemini', minCompleted: 1 } },
+  { id: 'eva-suit', name: 'EVA suit', program: 'apollo', rdCost: 5, moneyCost: 2, tags: ['suit', 'apollo'], unlocksAfter: { program: 'gemini', minCompleted: 1 } },
 ];
 
 // --- events (FR9.2) --------------------------------------------------------
 
 const EVENTS: EventEntry[] = [
-  { face: 1, name: 'Gagarin Orbits!', effects: [{ type: 'sovietShift', amount: 3 }] },
-  { face: 2, name: 'Soviet Lunar Probe', effects: [{ type: 'sovietShift', amount: 2 }] },
+  { face: 1, name: 'Gagarin Orbits!', effects: [{ type: 'sovietShift', amount: 6 }] },
+  { face: 2, name: 'Soviet Lunar Probe', effects: [{ type: 'sovietShift', amount: 4 }] },
   { face: 3, name: 'Apollo 1 Fire', effects: [{ type: 'loseActions', amount: 2 }, { type: 'stunCrew', launches: 1 }] },
   { face: 4, name: "Kennedy's Moon Speech", effects: [{ type: 'rdGain', amount: 4 }] },
   { face: 5, name: 'Congressional Windfall', effects: [{ type: 'moneyGain', amount: 6 }] },
-  { face: 6, name: 'Soyuz 1 Setback', effects: [{ type: 'sovietShift', amount: -3 }] },
+  { face: 6, name: 'Soyuz 1 Setback', effects: [{ type: 'sovietShift', amount: -2 }] },
 ];
 
 // --- tuning (design-doc tuning list + kit p.2 formula table) ---------------
@@ -237,8 +237,8 @@ const TUNING: Tuning = {
   apollo1ActionLoss: 2,
   programBonuses: { mercury: 2, gemini: 3, apollo: 5 },
   tierThresholds: {
-    moon: { distinguished: 70, administrator: 55 },
-    timedOut: { honorable: 45, good: 30 },
+    moon: { distinguished: 75, administrator: 65 },
+    timedOut: { honorable: 55, good: 45 },
   },
   startingMoney: 0,
   startingRd: 0,

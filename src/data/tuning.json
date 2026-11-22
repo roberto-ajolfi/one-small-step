@@ -40,8 +40,8 @@
   "apollo1ActionLoss": 2,
   "programBonuses": { "mercury": 2, "gemini": 3, "apollo": 5 },
   "tierThresholds": {
-    "moon": { "distinguished": 70, "administrator": 55 },
-    "timedOut": { "honorable": 45, "good": 30 }
+    "moon": { "distinguished": 75, "administrator": 65 },
+    "timedOut": { "honorable": 55, "good": 45 }
   },
   "startingMoney": 0,
   "startingRd": 0

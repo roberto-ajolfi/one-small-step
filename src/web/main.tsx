@@ -1,0 +1,17 @@
+/**
+ * Web entry point — mounts the React shell over the Tailwind theme (spec §7).
+ */
+
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { App } from './App';
+import './styles/theme.css';
+
+const container = document.getElementById('root');
+if (!container) throw new Error('missing #root element');
+
+createRoot(container).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+);

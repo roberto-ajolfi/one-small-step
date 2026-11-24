@@ -12,7 +12,8 @@
     "test:watch": "vitest",
     "lint": "eslint src tests",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"tests/**/*.ts\" \"tests/**/*.tsx\"",
-    "sim": "tsx src/sim/cli.ts"
+    "sim": "tsx src/sim/cli.ts",
+    "print": "tsx src/print/generate.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",

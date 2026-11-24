@@ -2,8 +2,7 @@
 
 A solitaire space-race card game: fly the 1960s campaign against the Soviets.
 This repository is the digital prototype — a pure rules engine, data-driven
-content, a balance harness, a React web UI, and (soon) a printable-kit
-generator.
+content, a balance harness, a React web UI, and a printable-kit generator.
 
 Design docs live in [`proposals/`](proposals/): `one-small-step.md` is the
 **normative ruleset**, `one-small-step-technical-spec.md` is the prototype spec,
@@ -25,6 +24,7 @@ npm run dev        # web UI at http://localhost:5173
 | `npm test` | Vitest: engine, data, sim, integration and web tests |
 | `npm run lint` | ESLint, including the layering rules below |
 | `npm run sim` | Balance harness CLI (`npm run sim -- --help`) |
+| `npm run print` | Generate the printable kit (`dist/one-small-step-printable-kit.html`) for browser print-to-PDF |
 
 Type-check with `npx tsc --noEmit`.
 
@@ -39,8 +39,9 @@ src/
 ├── web/      React UI: store.ts (session + save/load + share links),
 │             useGameSession.ts (useSyncExternalStore binding), ui/ (dumb
 │             primitives), components/ (board areas), styles/ (Tailwind entry)
-└── print/    printable-kit generator (M5)
-tests/        engine · data · sim · integration · web
+└── print/    printable-kit generator: generate.ts (data → 4 kit pages),
+│             template.ts (layout + kit prose), `npm run print`
+tests/        engine · data · sim · integration · web · print
 ```
 
 **Dependency rules** (enforced by `eslint.config.js`): `engine` imports nothing
